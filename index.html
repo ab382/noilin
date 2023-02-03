@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            height: 200vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #F5F5F5, #E0E0E0);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        #apology {
+            font-size: 72px;
+            color: #F44336;
+            text-shadow: 1px 1px #333;
+            text-align: center;
+            animation: textShadow 1s ease-in-out;
+            animation-delay: 1s;
+        }
+
+        #heart {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background-image: url('https://image.flaticon.com/icons/svg/719/719707.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 48px;
+            color: #333;
+            text-shadow: 1px 1px #E0E0E0;
+            text-align: center;
+            animation: textShadow 2s ease-in-out;
+            animation-delay: 2s;
+            margin: 50px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes textShadow {
+            0% {
+                text-shadow: 1px 1px #333;
+            }
+
+            50% {
+                text-shadow: 1px 1px #E0E0E0;
+            }
+
+            100% {
+                text-shadow: 1px 1px #333;
+            }
+        }
+
+        @keyframes apology {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes message {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .bb {
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .body {
+            margin-top: 50px;
+            background-size: cover;
+            align-items: center;
+            height: 55vh;
+            width: 60vh;
+            animation: pulse 1s infinite;
+            background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/50/heart-157895_960_720.png");
+        }
+
+        h1 {
+            font-size: 50px;
+            color: rgb(240, 239, 243);
+            margin-top: 80px;
+            margin-left: 70px;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.3);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heart"></div>
+    <div>
+        <h1 id="apology" style="animation: apology 1s ease-in-out">I'm Sorry!</h1>
+        <div class="bb">
+            <div class="body">
+                <h1>Noilin</h1>
+            </div>
+        </div>
+        <p style="animation: message 1s ease-in-out; animation-delay: 1s">நான் உங்களுக்கு பிரதி வாக்குகிறேன் (I care
+            about you) மற்றும் நான் காரணமாக முழுமையான வார்த்தைகள் வருகின்றது என்ன தவிர்க்கவும் (I regret the harsh words
+            I used earlier). தவிர்க்குங்கள் (Please forgive me).</p>
+    </div>
+</body>
+
+</html>
